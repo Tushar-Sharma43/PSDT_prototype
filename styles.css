@@ -823,3 +823,22 @@ select{
     line-height:2;
     letter-spacing:10%;
  }
+
+/* Footer styling */
+.footer {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-align: center; /* Center text horizontally */
+    padding: 15px 0; /* Vertical spacing */
+    font-family: 'Iowan Old Style', serif; /* Font for text */
+    font-size: 16px; /* Font size */
+    position: fixed; /* Keeps the footer at the bottom */
+    bottom: 0; /* Aligns to the bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.footer p {
+    margin: 0; /* Removes default margin for better alignment */
+}
+
