@@ -532,7 +532,7 @@ input[type="text"]{
     border-radius: 10px;
     font-size: 1.rem;
     font-family: 'Inria Serif', serif;
-    color: white;
+    color: grey;
  }
 
  input[type="number"]{
@@ -564,7 +564,7 @@ input[type="text"]{
     border-radius: 10px;
     font-size: 1.rem;
     font-family: 'Inria Serif', serif;
-    color: white;
+    color: grey;
  }
 button[type="text"]:hover {
     background: linear-gradient(180deg, #3F76D1, #A6C4F5); /* Optional hover effect */
