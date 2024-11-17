@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    
+    <section id="nav-bar">
+        <nav>
+            <div id="elements">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#networks">Networks</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                
+            
+            <div id="container">
+                <button id="log-in">LOG IN</button>
+            </div>
+            
+                </div>
+            
+        </div>
+        
+        </nav>
+        
+    
+        </div>
+        </section>
+        <div id="login">
+            <div id="loginPage" class="login-container">
+                <h1>Log in</h1>
+                <button id="hotel-login" class="login-buttons" >Log in with Hotel id</button>
+                <button id="ngo-login" class="login-buttons">Log in with NGO id</button>
+                <button id="individual-login" class="login-buttons">Log in as a individual id</button>
+                <p>OR</p>
+                <button id="new-account" class="login-buttons">Create account</button>
+    
+            </div>
+            <div id="loginModal1" class="modal">
+                <span class="close-btn">&times;</span>
+                <h2>Log in</h2>
+                <form>
+                    <input type="text" placeholder="Enter your hotel id" required><br><br>
+                    <input type="password" placeholder="Enter your password" required><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="loginModal2" class="modal">
+                <span class="close-btn">&times;</span>
+                <h2>Log in</h2>
+                <form>
+                    <input type="text" placeholder="Enter your NGO id" required><br><br>
+                    <input type="password" placeholder="Enter your password" required><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <div id="loginModal3" class="modal">
+                <span class="close-btn">&times;</span>
+                <h2>Log in</h2>
+                <form>
+                    <input type="text" placeholder="Enter your email id" required><br><br>
+                    <input type="password" placeholder="Enter your password" required><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <div id="loginModal4" class="modal">
+                <span class="close-btn">&times;</span>
+                <h2>Log in</h2>
+                <form>
+                    <input type="text" placeholder="Enter your email id" required><br><br>
+                    <input type="password" placeholder="Create password" required><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+     <section id="home">
+        <div class="home-page">
+            <div id="box">
+                <p class="heading">Turn Leftovers into Lifesavers</p>
+                <p class="sub-heading">“Every donation goes beyond reducing waste — it gives hope.”</p>
+                <button id="donate-now" onclick="openDonationForm()">Donate Now!</button>
+                <div class="images-home">
+                    <img src="dustbin_waste.png" class="waste">
+                    <img src="image_4.png" class="plate">    
+                </div>
+                
+            </div>
+    </div>
+    <div id="donationOverlay" class="overlay">
+        <div class="donation-container">
+            <button class="close-btn" onclick="closeDonationForm()">×</button>
+            <h2>What Type of Food Would You Like to Donate?</h2>
+            
+            <form action="index1.html" method="POST">
+                <label for="food-type">Select Food Type</label>
+                <select id="food-type" name="food-type" required>
+                    <option value="grains">Grains (Rice, Wheat, etc.)</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="cooked-meals">Cooked Meals</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="number" min="0" id="quantity" name="quantity" placeholder="Enter no. of plates" required>
+                <label for="other-details">If Other, Please Specify:</label>
+                <input type="text" id="other-details" name="other-details" placeholder="Specify Food Type" required>
+
+                <button type="submit" class="donate-btn">Donate Food</button>
+            </form>
+        </div>
+    </div>
+    <section id="newtworks">
+        <div id="network-page">
+            <p class="heading">Our Networks</p>
+            <section id="networks">
+                <img src="map_image.png" class="map-image">
+                <div class="after-image">
+                    <p class="sub-heading">Find the nearest NGO and make a difference today!</p>
+                <div class="search">
+                    <img src="search.svg" class="icon">
+                    <input type="text" placeholder="   Search NGOs nearby">
+                </div>
+    
+                <div class="info">
+                    <ul>
+                        <li>More than 100 NGOs in Delhi NCR</li>
+                        <li>More than 1000 Hotels in Delhi NCR</li>
+                    </ul>
+                </div>
+                <button id="explore">Explore more</button>
+                </div>
+    </section>
+    <section id="benefits">
+        <p class="heading">Our Benefits</p>
+        <div class="boxes">
+            <!-- Box 1 -->
+            <div class="flip-card">
+                <div class="box1">
+                    <img src="tree.png" alt="Tree">
+                    <p class="sub-heading">Environmental Impact</p>
+                    <p class="content">Reduced food wastes</p>
+                    <p class="content">Lower carbon footprint</p>
+                </div>
+                <div class="card-back">
+                    <p>By redistributing leftover food, we cut down on landfill waste, conserving natural resources and contributing to a healthier planet.</p>
+                </div>
+            </div>
+    
+            <!-- Box 2 -->
+            <div class="flip-card">
+                <div class="box2">
+                    <img src="globe.png" alt="Globe">
+                    <p class="sub-heading">Social Impact</p>
+                    <p class="content">Fight against hunger</p>
+                    <p class="content">Community development</p>
+                </div>
+                <div class="card-back">
+                    <p>By connecting businesses with NGOs, we tackle hunger while fostering social responsibility and creating a support network for those who need it most.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Box 3 -->
+            <div class="flip-card">
+                <div class="box3">
+                    <img src="finance.png" alt="Finance">
+                    <p class="sub-heading">Financial Benefits</p>
+                    <p class="content">Tax incentive</p>
+                    <p class="content">Cost savings on waste disposal</p>
+                </div>
+                <div class="card-back">
+                    <p>Hotels and event organizers can benefit from tax deductions on food donations, while reducing waste disposal costs and supporting a circular economy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <section id="blogs">
+            <div class="blogs">
+                <p class="heading">Blogs</p>
+                <p class="sub-heading">“The Ripple Effect: How Donating Leftover Food Transforms Communities”</p>
+                <div class="block">
+                    <div class="content">
+                        <img src="blog-image.png" class="after-heading">
+                        <p>Food wastage is a growing global concern, with millions of tons of edible food being discarded each year while countless individuals and families go hungry. The act of donating leftover food, no matter how small, can have a profound impact on communities. Every meal shared can help nourish a family in need, provide vital resources to local NGOs, and reduce the strain on landfills. Behind the scenes,
+                         technology is playing a key role in connecting food donors with organizations working tirelessly to combat hunger and reduce waste. By using platforms that facilitate food donations, we not only address hunger but also contribute to a more sustainable and compassionate world. Donating food is an easy yet powerful way to make a difference — your small act of kindness can create a ripple effect that transforms lives, supports local communities, and helps protect the planet. Together, we can turn food waste into a force for good.</p>
+                    </div>
+                    
+                </div>
+                <div id="button" class="button-more">
+                    <button id="more-blogs">More blogs </button>
+                </div>
+                </div>
+            
+        </section>
+        <section id="about">
+            <div class="about">
+                <p class="heading">About</p>
+            </div>
+            <div class="content">
+                <p class="para">At [Company Name], we are committed to tackling one of the most pressing challenges of our time: food wastage. Our mission is simple — to connect hotels, event organizers, and food establishments with local NGOs, ensuring that leftover food is repurposed to help those in need. By creating a seamless platform for food donation, we strive to make a meaningful impact on both the community and the environment.
+                    Every year, millions of tons of edible food are discarded while millions of people go hungry. We believe that no food should go to waste, and through our platform, we provide an easy way for food providers to contribute to society. Our network of trusted NGOs ensures that donated food reaches the people who need it most, while also offering environmental benefits by reducing waste and lowering carbon footprints.
+                    In addition to addressing hunger, our platform offers a practical, sustainable solution for food establishments. By partnering with us, they can not only make a positive social impact but also gain tax benefits for their food donations. Our service includes safe and reliable food collection, transportation, and delivery, ensuring a hassle-free experience for all parties involved.
+                    Join us in turning food waste into a powerful tool for change. Together, we can make a difference—one meal at a time.</p>
+            </div>
+            <p class="social">Social handles</p>
+            <div class="logo-container">
+                <img src="Instagram.png">
+                <img src="LinkedIn.png">
+                <img src="TwitterX.png">
+                <img src="Gmail.png">
+            </div>
+
+
+        </section>
+    <script src="script.js"></script>
+    
+</body>
+</html>

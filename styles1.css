@@ -1,0 +1,87 @@
+/* Body and layout styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('ty_bg.png'); /* Add a festive background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  .container {
+    margin-top: 50px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Child Image Styles */
+  .child-image {
+    width: 300px;
+    transition: transform 1s, opacity 1s;  /* Transition for smooth change */
+  }
+  
+  .thank-you-message {
+    opacity: 0;  /* Initially hidden */
+    font-size: 30px;
+    color: #FFD700;  /* Golden color for the message */
+    transition: opacity 1s;  /* Fade-in effect */
+  }
+  
+  .donate-btn {
+    background-color: #FF6347;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .donate-btn:hover {
+    background-color: #FF4500; /* Darker red on hover */
+  }
+  
+  /* Fireworks/Party Poppers Animation */
+  .firework {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #FF5733;
+    border-radius: 50%;
+    animation: firework 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes firework {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(3);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(5);
+      opacity: 0;
+    }
+  }
+  
+  /* Firework effect trigger on donation */
+  .firework.active {
+    animation: firework 1s ease-out forwards;
+  }
+  
+  /* Optional: Add an animation to the donation button */
+  .donate-btn:active {
+    transform: scale(0.98); /* Slight scale effect when clicked */
+  }
+  
