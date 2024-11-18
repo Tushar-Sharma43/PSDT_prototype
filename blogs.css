@@ -1,0 +1,182 @@
+/* Global Styles */
+body {
+    font-family: 'Iowan Old Style', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8DCDBF; /* Green background */
+    color: #374151; /* Dark gray text */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+nav {
+    background-color: #3B82F6; /* Blue for navigation */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h1 {
+    color: #fff;
+    margin: 0;
+}
+
+section.main-content {
+    text-align: center;
+    padding: 50px 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
+}
+
+section.main-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+section.main-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 30px;
+    background-color: #F3F4F6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    animation: fadeIn 1.2s ease-out forwards; /* Fade-in for blog container */
+}
+
+.blog-card {
+    background-color: #FFFFFF;
+    border: 2px solid #8DCDBF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInCard 1.5s ease-out forwards;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card h3 {
+    font-size: 1.5rem;
+    color: #3B82F6; /* Blue for blog titles */
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.blog-card a {
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-card a:hover {
+    color: #10B981; /* Green on hover */
+}
+
+/* Animation for Fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Animation for Blog Cards Fade-in */
+@keyframes fadeInCard {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Suggestion Section Styling */
+.suggestion-section {
+    background-color: #F3F4F6; /* Light gray background for the suggestion section */
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
+}
+
+.suggestion-container h2 {
+    font-size: 2rem;
+    color: #3B82F6; /* Blue for section heading */
+    margin-bottom: 15px;
+}
+
+.suggestion-container p {
+    font-size: 1.2rem;
+    color: #374151; /* Dark gray text */
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.suggestion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-form label {
+    font-size: 1rem;
+    color: #374151; /* Dark gray text */
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.suggestion-form input,
+.suggestion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #8DCDBF; /* Light green border */
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.suggestion-form input:focus,
+.suggestion-form textarea:focus {
+    border-color: #3B82F6; /* Blue focus border */
+    outline: none;
+}
+
+.suggestion-form button {
+    padding: 12px 25px;
+    background-color: #3B82F6; /* Blue button */
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-form button:hover {
+    background-color: #2563EB; /* Darker blue on hover */
+}
