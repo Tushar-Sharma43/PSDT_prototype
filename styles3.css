@@ -1,0 +1,98 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8DCDBF;
+    color: #333;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #3B82F6;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.25rem;
+
+}
+
+/* Container for NGO Cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+/* Individual NGO Card */
+.ngo-card {
+    background-color: #E6F0FA;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ngo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* NGO Image */
+.ngo-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* NGO Name */
+.ngo-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Contact Button */
+.contact-btn {
+    background-color: #ff6b1c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color:#4CAF50;
+    font-weight: bolder;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    display: none; /* Hidden by default */
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.ngo-card {
+    animation: pulse 3s infinite;
+}
