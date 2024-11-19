@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #d4d4d4; /* Light green background */
+}
+
+.container {
+  text-align: center;
+  color: #3B82F6; /* Blue text color */
+}
+
+.tick-box {
+  width: 200px; /* Increased size */
+  height: 250px; /* Increased size */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tick {
+  width: 100px; /* Adjusted for no cropping */
+  height: 100px; /* Adjusted for no cropping */
+  animation: drawCircle 1s ease-out forwards, drawCheckmark 1s 1s ease-out forwards;
+}
+
+.circle {
+  fill: none;
+  stroke: #3B82F6;
+  stroke-width: 2.5;
+  stroke-dasharray: 157; /* Circumference of the circle */
+  stroke-dashoffset: 157;
+  animation: drawCircle 1s ease-out forwards;
+}
+
+.checkmark {
+  stroke-dasharray: 48; /* Length of the checkmark path */
+  stroke-dashoffset: 48;
+  animation: drawCheckmark 1s 1s ease-out forwards;
+}
+
+.message {
+  margin: 20px 0 10px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 1s 2s forwards;
+}
+
+.thank-you {
+  font-size: 18px;
+  opacity: 0;
+  animation: fadeIn 1s 2.5s forwards;
+}
+
+@keyframes drawCircle {
+  from {
+    stroke-dashoffset: 157;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheckmark {
+  from {
+    stroke-dashoffset: 48;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
