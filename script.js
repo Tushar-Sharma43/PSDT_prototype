@@ -139,6 +139,7 @@ window.addEventListener("click", (event) => {
 
 
 
+
 // Select all sections and their corresponding navigation links
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -180,3 +181,21 @@ function closeDonationForm() {
 }
 
 // Add event listener to close the modal if clicked outside
+
+
+// Function to toggle the FAQ modal
+function toggleFAQ() {
+    const modal = document.getElementById('faq-modal');
+    modal.style.display = modal.style.display === "block" ? "none" : "block";
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('faq-modal');
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+
+};
+
+
