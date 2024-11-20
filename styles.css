@@ -972,7 +972,7 @@ select{
     text-align: center;      /* Center-align text */
     padding: 15px 0;         /* Vertical padding */
     font-size: 14px;         /* Font size */
-    position: fixed;         /* Fixed at the bottom of the page */
+    position: absolute;         /* Fixed at the bottom of the page */
     bottom: 0;
     width: 100%;
 }
