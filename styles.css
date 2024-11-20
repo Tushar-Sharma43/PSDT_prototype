@@ -965,3 +965,19 @@ select{
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+.footer {
+    background-color: #333;  /* Dark background */
+    color: white;            /* White text color */
+    text-align: center;      /* Center-align text */
+    padding: 15px 0;         /* Vertical padding */
+    font-size: 14px;         /* Font size */
+    position: fixed;         /* Fixed at the bottom of the page */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;               /* Remove default margin */
+}
+
