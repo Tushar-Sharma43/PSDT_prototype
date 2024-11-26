@@ -679,6 +679,52 @@ button[type="submit"]:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.profile-container {
+    position: absolute;
+    cursor: pointer;
+    left:0;
+    padding:30px;
+  }
+  
+  .profile-icon {
+    width: 40px; /* Adjust width to your preference */
+    height: 40px; /* Adjust height to match width for a perfect circle */
+    border-radius: 50%; /* This makes the image circular */
+    border: 2px solid white; /* Optional: Add a white border for styling */
+    object-fit: cover; /* Ensures the image fits well inside the circle */
+  }
+  
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f2f2f2;
+  }
 /* Front face styles (box1, box2, box3) */
 .flip-card .box1,
 .flip-card .box2,
