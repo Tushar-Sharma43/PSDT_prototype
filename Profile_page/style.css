@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8DCDBF;
+    color: #333;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    border: 1px solid black;
+    background-color: rgb(239, 239, 239);
+    border-radius: 15px;
+}
+header {
+    background-color:#3B82F6;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+}
+button:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+.tab-content {
+    display: none;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.tab-content.active {
+    display: block;
+}
+.certificate-list, .donation-list, .proof {
+    margin-top: 1rem;
+}
+.certificate, .donation {
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.certificate img, .proof img {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+}
+.progress {
+    background: #3B82F6;
+    height: 100%;
+    width: 0;
+    animation: progressAnimation 2s forwards;
+}
+@keyframes progressAnimation {
+    0% { width: 0; }
+    100% { width: 50%; }
+}
+
+/* Donations Section */
+.donation-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.donation-actions select, .donation-actions input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+}
+.donation {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.donation-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.donation-summary button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+.donation-summary button:hover {
+    background-color: #45a049;
+}
+.donation-details {
+    margin-top: 1rem;
+    border-top: 1px dashed #ccc;
+    padding-top: 0.5rem;
+    background: #fff;
+    animation: fadeIn 0.5s;
+}
+.donation-details button {
+    background-color: #ff5722;
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.donation p{
+    gap:5px;
+    padding:5px;
+}
+.donation-details button:hover {
+    background-color: #e64a19;
+}
+.hidden {
+    display: none;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* NGO Section */
+.ngo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.ngo-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ngo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.ngo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.ngo-card h3 {
+    font-size: 1.25rem;
+    color: #3B82F6;
+    margin-bottom: 0.5rem;
+}
+.ngo-card p {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    color: #555;
+}
+.ngo-card .view-more {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+.ngo-card .view-more:hover {
+    background-color: #45a049;
+}
+.ngo-details {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #ddd;
+    background: #f9f9f9;
+    animation: fadeIn 0.5s;
+}
+.hidden {
+    display: none;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

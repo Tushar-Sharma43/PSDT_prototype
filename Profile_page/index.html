@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadka Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Profile</h1>
+            <p>Track your donations, certificates, and more with ease.</p>
+        </header>
+        <nav>
+            <button class="tab-button" data-tab="certificates">Your Certificates</button>
+            <button class="tab-button" data-tab="donations">Your Past Donations</button>
+            <button class="tab-button" data-tab="ngos">NGOs</button>
+            <button class="tab-button" data-tab="proofs">Proofs</button>
+            <button class="tab-button" data-tab="live-status">Live Status</button>
+        </nav>
+        <main id="content">
+            <div id="certificates" class="tab-content hidden">
+                <h2>Your Certificates</h2>
+                <div class="certificate-list">
+                    <div class="certificate">
+                        <img src="images/certificate1.jpg" alt="Certificate 1">
+                        <h3>Certificate 1</h3>
+                        <p>Donation Date: 01-Jan-2024</p>
+                        <p>NGO: Helping Hands</p>
+                    </div>
+                    <div class="certificate">
+                        <img src="images/certificate2.jpg" alt="Certificate 2">
+                        <h3>Certificate 2</h3>
+                        <p>Donation Date: 15-Feb-2024</p>
+                        <p>NGO: Food4All</p>
+                    </div>
+                </div>
+            </div>
+            <div id="donations" class="tab-content hidden">
+                <h2>Your Past Donations</h2>
+                <div class="donation-actions">
+                    <label for="sort">Sort By:</label>
+                    <select id="sort">
+                        <option value="date">Date</option>
+                        <option value="amount">Amount</option>
+                        <option value="ngo">NGO</option>
+                    </select>
+                    <input type="text" id="filter" placeholder="Search donations...">
+                </div>
+                <div class="donation-list">
+                    <div class="donation">
+                        <div class="donation-summary">
+                            <p><strong>Donation 1:</strong> 5 plates</p>
+                            <p>Date: 01-Jan-2024</p>
+                            <p>NGO: Helping Hands</p>
+                            <button class="toggle-details">View Details</button>
+                        </div>
+                        <div class="donation-details hidden">
+                            <p>Purpose: Food Distribution</p>
+                            <p>Status: Verified</p>
+                            <button class="download-invoice">Download Invoice</button>
+                            <button class="report-issue">Report Issue</button>
+                        </div>
+                    </div>
+                    <div class="donation">
+                        <div class="donation-summary">
+                            <p><strong>Donation 2:</strong> 10 plates</p>
+                            <p>Date: 15-Feb-2024</p>
+                            <p>NGO: Food4All</p>
+                            <button class="toggle-details">View Details</button>
+                        </div>
+                        <div class="donation-details hidden">
+                            <p>Purpose: Medical Aid</p>
+                            <p>Status: Verified</p>
+                            <button class="download-invoice">Download Invoice</button>
+                            <button class="report-issue">Report Issue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="ngos" class="tab-content hidden">
+                <h2>NGOs You've Contributed To</h2>
+                <div class="ngo-container">
+                    <div class="ngo-card">
+                        <img src="images/image.png" alt="Helping Hands">
+                        <h3>Helping Hands</h3>
+                        <p>Total Donations: 70 plates</p>
+                        <p>Focus Area: Food Distribution</p>
+                        <button class="view-more">View More</button>
+                        <div class="ngo-details hidden">
+                            <p><strong>Contact:</strong> +91-9876543210</p>
+                            <p><strong>Email:</strong> contact@helpinghands.org</p>
+                            <p><strong>Location:</strong> Mumbai, India</p>
+                        </div>
+                    </div>
+                    <div class="ngo-card">
+                        <img src="images/NGO3.png" alt="Food4All">
+                        <h3>Food4All</h3>
+                        <p>Total Donations: 100 plates</p>
+                        <p>Focus Area: Medical Aid</p>
+                        <button class="view-more">View More</button>
+                        <div class="ngo-details hidden">
+                            <p><strong>Contact:</strong> +91-9988776655</p>
+                            <p><strong>Email:</strong> info@food4all.org</p>
+                            <p><strong>Location:</strong> Delhi, India</p>
+                        </div>
+                    </div>
+                    <!-- Add more NGO cards as needed -->
+                </div>
+            </div>
+            
+            <div id="proofs" class="tab-content hidden">
+                <h2>Proofs</h2>
+                <div class="proof">
+                    <img src="images/proof.jpg" alt="Verification Proof">
+                    <p>Verification in progress...</p>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+            </div>
+            <div id="live-status" class="tab-content hidden">
+                <h2>Live Status</h2>
+                <div class="status">
+                    <p>Donation 1: In Progress</p>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                    <p>Estimated Completion Time: 2 Days</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
