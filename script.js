@@ -199,3 +199,18 @@ window.onclick = function(event) {
 };
 
 
+const profileIcon = document.getElementById('profileIcon');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+profileIcon.addEventListener('click', () => {
+  // Toggle the dropdown menu
+  dropdownMenu.style.display =
+    dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+// Close dropdown when clicking outside
+window.addEventListener('click', (event) => {
+  if (!profileIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+    dropdownMenu.style.display = 'none';
+  }
+});
